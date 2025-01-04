@@ -47,6 +47,7 @@
     
 }
 
+
 .header-content
 {
     display: flex;
@@ -59,7 +60,7 @@
 {
      height: 550px;
      width: 650px;
-     border-radius: 30px;
+     border-radius: 50%;
      overflow: hidden;
      box-shadow: 7px 5px 28px rgba(0,0,0,0.1);
 
@@ -67,9 +68,12 @@
 
 .profile img
 {
-    height: 250px;
-    width: 100%;
+    height: 350px;
+    width: 120%;
+    border-radius: 60%;
     object-fit: cover;
+    border: 5px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .header-content .text-content
@@ -184,74 +188,6 @@
 .button:hover .icon{
     width: 100%;
 }
-
-@media(max-width:1200px)
-{
-    .header-content
-    {
-        flex-direction: column;
-    }
-    .header-content.profile
-    {
-        width: 320px;
-        height: 320px;
-        border-radius: 50%;
-        margin-top: 2rem;
-    }
-    .header-content .profile img {
-      
-        width: 100%;
-        height: 100%;
-    }
-    .text-content
-    {
-        width: 100%;
-        text-align: center;
-    }
-    .text-content h1::before
-    {
-        display: none;
-    }
-    .navigation
-    {
-        background-color: #2b2a2a;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-    .navigation .nav
-    {
-        width: 60%;
-        flex-direction: row;
-        padding: 0.3rem;
-        margin: auto;
-    }
-}
-
-@media(max-width:768px)
-{
-    .header-content .profile
-    {
-        width: 280px;
-        height: 280px;
-        border-radius: 50%;
-        margin-top: 2rem;
-    }
-    .header-content .profile img 
-    {
-        width: 100%;
-        height:100%;
-    }
-    .header-content .text-content h1
-    {
-      font-size: 1.5rem;
-      line-height: 1.7rem;
-    }
-}
-
-
-
-
 
   /* Skills Section */
 
@@ -424,3 +360,73 @@ footer form button:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
+/*Media queries  */
+
+@media(max-width:1200px)
+{
+    .header-content
+    {
+        flex-direction: column;
+    }
+    .header-content.profile
+    {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-top: 1.5rem;
+    }
+    .header-content .profile img {
+      
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .text-content
+    {
+        width: 100%;
+        text-align: center;
+    }
+    .text-content h1::before
+    {
+        display: none;
+    }
+    .navigation
+    {
+        background-color: #2b2a2a;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .navigation .nav
+    {
+        width: 60%;
+        flex-direction: row;
+        padding: 0.3rem;
+        margin: auto;
+    }
+}
+
+@media(max-width:768px)
+{
+    .header-content .profile
+    {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        margin-top: 2rem;
+    }
+    .header-content .profile img 
+    {
+        width: 100%;
+        height:100%;
+    }
+    .header-content .text-content h1
+    {
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+    }
+}
+
+
+/*Media queries end  */
